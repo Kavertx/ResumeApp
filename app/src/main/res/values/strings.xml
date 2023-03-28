@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Résumé</string>
+    <string name="title_projects">Projects</string>
+    <string name="title_certificates">Certificates</string>
+</resources>

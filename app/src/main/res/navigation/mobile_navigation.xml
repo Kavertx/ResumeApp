@@ -9,7 +9,7 @@
         android:id="@+id/navigation_projects"
         android:name="com.example.resume.ui.projects.ProjectsFragment"
         android:label="@string/title_projects"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_projects" />
 
     <fragment
         android:id="@+id/navigation_certificates"

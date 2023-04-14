@@ -30,10 +30,6 @@ class CertificatesFragment : Fragment() {
         _binding = FragmentCertificatesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        viewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

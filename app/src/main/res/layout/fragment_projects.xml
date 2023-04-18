@@ -25,6 +25,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_Android" />
+        app:layout_constraintTop_toBottomOf="@id/spinner_Android"
+        android:padding="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

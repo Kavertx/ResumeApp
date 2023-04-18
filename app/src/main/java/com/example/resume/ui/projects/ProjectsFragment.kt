@@ -49,6 +49,7 @@ class ProjectsFragment : Fragment() {
             spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     //TODO: Try to find a better way of setting the recyclerview
+                    
                     if (p2==0){
                         binding.projectsRecyclerView.layoutManager = LinearLayoutManager(context)
                         binding.projectsRecyclerView.adapter = ProjectsAdapter(viewModel.androidProjectsList)

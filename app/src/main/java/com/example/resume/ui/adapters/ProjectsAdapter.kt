@@ -3,13 +3,10 @@ package com.example.resume.ui.adapters
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.resume.R
-import com.example.resume.databinding.FragmentProjectsBinding
 import com.example.resume.databinding.ItemProjectBinding
 import com.example.resume.ui.projects.Project
 

@@ -88,8 +88,8 @@ class ProjectsFragment : Fragment() {
     }
 
     companion object{
-        val githubAccountUri = "https://github.com/Kavertx/"
-        val leetcodeAccountUri = "https://leetcode.com/Kavertx/"
+        const val githubAccountUri = "https://github.com/Kavertx/"
+        const val leetcodeAccountUri = "https://leetcode.com/Kavertx/"
     }
 
 }

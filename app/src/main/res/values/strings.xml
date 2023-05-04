@@ -5,21 +5,12 @@
     <string name="android">Android</string>
     <string name="web">Web</string>
     <string name="desktop">Desktop</string>
+    <string name="github_account">GitHub Account</string>
+    <string name="leetcode_account">Leetcode Account</string>
 
     <string-array name="array_tech_stack">
         <item name="Android">Android</item>
         <item name="Web">Web</item>
         <item name="Desktop">Desktop</item>
-    </string-array>
-    <string-array name="array_android_project_names">
-        <item name="Resume">Resume</item>
-        <item name="Notes">Notes</item>
-        <item name="Calculator">Calculator</item>
-    </string-array>
-
-    <string-array name="array_android_project_github_link">
-        <item name="Resume">https://github.com/Kavertx/ResumeApp/</item>
-        <item name="Notes">https://github.com/Kavertx/NotesApp/</item>
-        <item name="Calculator">https://github.com/Kavertx/Calculator/</item>
     </string-array>
 </resources>

@@ -1,7 +1,5 @@
 package com.example.resume.ui.certificates
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CertificatesViewModel : ViewModel() {

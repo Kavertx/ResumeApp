@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.resume.databinding.ItemCerificateBinding
 import com.example.resume.ui.certificates.Certificate
-import kotlinx.coroutines.processNextEventInCurrentThread
 
 class CertificatesAdapter(private  val dataSet: Array<Certificate>):
 RecyclerView.Adapter<CertificatesAdapter.CertificatesViewHolder>(){

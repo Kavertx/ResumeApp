@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -27,13 +25,11 @@ class CertificatesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val certificatesViewModel =
-            ViewModelProvider(this)[CertificatesViewModel::class.java]
+        ViewModelProvider(this)[CertificatesViewModel::class.java]
 
         _binding = FragmentCertificatesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

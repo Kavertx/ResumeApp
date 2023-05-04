@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resume.R
 import com.example.resume.databinding.FragmentProjectsBinding
@@ -19,8 +18,16 @@ import com.example.resume.ui.adapters.ProjectsAdapter
 
 class ProjectsFragment : Fragment() {
 
-    private val viewModel: ProjectsViewModel by activityViewModels()
     private var _binding: FragmentProjectsBinding? = null
+
+
+    val resume = Project("Resume", "https://github.com/Kavertx/ResumeApp/")
+    private val notes = Project("Notes", "https://github.com/Kavertx/NotesApp/")
+    private val calculator = Project("Calculator", "https://github.com/Kavertx/Calculator/")
+
+    val androidProjectsList = arrayOf(resume, notes, calculator)
+    val webProjectsList = arrayOf<Project>()
+    val desktopProjectsList = arrayOf<Project>()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -65,13 +72,13 @@ class ProjectsFragment : Fragment() {
                     
                     if (p2==0){
                         binding.projectsRecyclerView.layoutManager = LinearLayoutManager(context)
-                        binding.projectsRecyclerView.adapter = ProjectsAdapter(viewModel.androidProjectsList)
+                        binding.projectsRecyclerView.adapter = ProjectsAdapter(androidProjectsList)
                     }else if (p2==1){
                         binding.projectsRecyclerView.layoutManager = LinearLayoutManager(context)
-                        binding.projectsRecyclerView.adapter = ProjectsAdapter(viewModel.webProjectsList)
+                        binding.projectsRecyclerView.adapter = ProjectsAdapter(webProjectsList)
                     } else {
                         binding.projectsRecyclerView.layoutManager = LinearLayoutManager(context)
-                        binding.projectsRecyclerView.adapter = ProjectsAdapter(viewModel.desktopProjectsList)
+                        binding.projectsRecyclerView.adapter = ProjectsAdapter(desktopProjectsList)
                     }
                 }
 
@@ -93,3 +100,6 @@ class ProjectsFragment : Fragment() {
     }
 
 }
+
+
+class Project(val Name: String, val URL: String)

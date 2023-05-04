@@ -5,16 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resume.databinding.FragmentCertificatesBinding
 import com.example.resume.ui.adapters.CertificatesAdapter
 
 class CertificatesFragment : Fragment() {
 
-    private val viewModel: CertificatesViewModel by activityViewModels()
     private var _binding: FragmentCertificatesBinding? = null
+
+    val androidKotlin2022 = Certificate("Android Development with Kotlin",
+        "https://softuni.bg/Certificates/Details/148201/bcf6ba8e")
+    val QAbasics = Certificate("QA Basics",
+        "https://softuni.bg/certificates/details/154752/77aba62a")
+
+    val certificatesArray = arrayOf(androidKotlin2022, QAbasics)
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +29,7 @@ class CertificatesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        ViewModelProvider(this)[CertificatesViewModel::class.java]
+
 
         _binding = FragmentCertificatesBinding.inflate(inflater, container, false)
 
@@ -35,7 +39,7 @@ class CertificatesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.certificatesRecyclerView.adapter = CertificatesAdapter(viewModel.certificatesArray)
+        binding.certificatesRecyclerView.adapter = CertificatesAdapter(certificatesArray)
         binding.certificatesRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 
@@ -44,3 +48,5 @@ class CertificatesFragment : Fragment() {
         _binding = null
     }
 }
+
+class Certificate(val name: String, val URL: String)

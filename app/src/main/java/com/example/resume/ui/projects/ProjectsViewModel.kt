@@ -13,7 +13,11 @@ class ProjectsViewModel : ViewModel() {
     val androidProjectsList = arrayOf<Project>(resume, notes, calculator)
     val webProjectsList = arrayOf<Project>()
     val desktopProjectsList = arrayOf<Project>()
+
+
 }
 
 
 class Project(val Name: String, val URL: String)
+
+

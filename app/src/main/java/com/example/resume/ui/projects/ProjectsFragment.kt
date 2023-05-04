@@ -1,18 +1,17 @@
 package com.example.resume.ui.projects
 
-import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.resume.R
 import com.example.resume.databinding.FragmentProjectsBinding
@@ -38,6 +37,20 @@ class ProjectsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val github: TextView = binding.github
+        github.setOnClickListener{
+            val uri = Uri.parse(githubAccountUri)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        val leetcode: TextView = binding.leetcode
+        leetcode.setOnClickListener{
+            val uri = Uri.parse(leetcodeAccountUri)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
         val spinner: Spinner = binding.spinnerAndroid
         ArrayAdapter.createFromResource(
             this.requireContext(),
@@ -74,5 +87,9 @@ class ProjectsFragment : Fragment() {
         _binding = null
     }
 
+    companion object{
+        val githubAccountUri = "https://github.com/Kavertx/"
+        val leetcodeAccountUri = "https://leetcode.com/Kavertx/"
+    }
 
 }

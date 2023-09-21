@@ -23,9 +23,9 @@ class ProjectsFragment : Fragment() {
 
     val resume = Project("Resume", "https://github.com/Kavertx/ResumeApp/")
     private val notes = Project("Notes", "https://github.com/Kavertx/NotesApp/")
-    private val calculator = Project("Calculator", "https://github.com/Kavertx/Calculator/")
+    private val cryptoExamProject = Project("Crypto Exam Project", "https://github.com/Kavertx/Crypto-Exam-Project/")
 
-    val androidProjectsList = arrayOf(resume, notes, calculator)
+    val androidProjectsList = arrayOf(resume, notes, cryptoExamProject)
     val webProjectsList = arrayOf<Project>()
     val desktopProjectsList = arrayOf<Project>()
 

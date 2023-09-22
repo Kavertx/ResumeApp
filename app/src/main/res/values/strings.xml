@@ -5,8 +5,8 @@
     <string name="android">Android</string>
     <string name="web">Web</string>
     <string name="desktop">Desktop</string>
-    <string name="github_account">GitHub Account</string>
-    <string name="leetcode_account">Leetcode Account</string>
+    <string name="github_account"><u>GitHub Account</u></string>
+    <string name="leetcode_account"><u>Leetcode Account</u></string>
 
     <string-array name="array_tech_stack">
         <item name="Android">Android</item>

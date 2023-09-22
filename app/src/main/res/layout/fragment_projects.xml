@@ -8,16 +8,18 @@
 
     <Spinner
         android:id="@+id/spinner_Android"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:contentDescription="@string/android"
         android:spinnerMode="dropdown"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textDirection="locale"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Change the layout height when there are too many projects
+          so they don't cover the github and leetcode views-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/projects_recycler_view"
         android:layout_width="match_parent"
@@ -32,34 +34,38 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_goneMarginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/projects_recycler_view"
+        app:layout_constraintBottom_toTopOf="@id/github"
         android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/github"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/github_account"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/leetcode" />
 
     <TextView
         android:id="@+id/leetcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/leetcode_account"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/github"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
